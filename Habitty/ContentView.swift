@@ -9,8 +9,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            HStack {
+                Text("Read 15 minutes")
+                CheckboxView().frame(width: 45)
+            }
+            HStack {
+                Text("Read 15 minutes")
+                CheckboxView().frame(width: 45)
+            }
+            HStack {
+                Text("Read 15 minutes")
+                CheckboxView().frame(width: 45)
+            }
+        }
     }
 }
 

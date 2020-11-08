@@ -13,6 +13,7 @@
 		BAD51EBC2557EF3F003C134B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD51EBB2557EF3F003C134B /* Assets.xcassets */; };
 		BAD51EBF2557EF3F003C134B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD51EBE2557EF3F003C134B /* Preview Assets.xcassets */; };
 		BAD51EC22557EF3F003C134B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD51EC02557EF3F003C134B /* LaunchScreen.storyboard */; };
+		BAD51ECA2557FB59003C134B /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51EC92557FB59003C134B /* CheckboxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BAD51EBE2557EF3F003C134B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BAD51EC12557EF3F003C134B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAD51EC32557EF3F003C134B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAD51EC92557FB59003C134B /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BAD51EB52557EF3D003C134B /* AppDelegate.swift */,
 				BAD51EB72557EF3D003C134B /* SceneDelegate.swift */,
 				BAD51EB92557EF3D003C134B /* ContentView.swift */,
+				BAD51EC92557FB59003C134B /* CheckboxView.swift */,
 				BAD51EBB2557EF3F003C134B /* Assets.xcassets */,
 				BAD51EC02557EF3F003C134B /* LaunchScreen.storyboard */,
 				BAD51EC32557EF3F003C134B /* Info.plist */,
@@ -149,6 +152,7 @@
 				BAD51EB62557EF3D003C134B /* AppDelegate.swift in Sources */,
 				BAD51EB82557EF3D003C134B /* SceneDelegate.swift in Sources */,
 				BAD51EBA2557EF3D003C134B /* ContentView.swift in Sources */,
+				BAD51ECA2557FB59003C134B /* CheckboxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
