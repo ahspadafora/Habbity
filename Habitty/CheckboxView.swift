@@ -21,7 +21,7 @@ struct CheckboxView: View {
         Image(imageName).resizable().scaledToFit()
             .onTapGesture {
             self.isChecked.toggle()
-                self.wasTapped()
+            self.wasTapped()
         }
     }
 }

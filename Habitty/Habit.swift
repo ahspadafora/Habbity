@@ -13,6 +13,7 @@ class Habit: ObservableObject, Identifiable {
     @Published var isCompleted: Bool
     var id = UUID()
     
+    
     init(description: String) {
         self.description = description
         self.isCompleted = false
@@ -20,9 +21,9 @@ class Habit: ObservableObject, Identifiable {
 }
 
 class Habits: ObservableObject {
-    func updateTotalComplete() {
-        objectWillChange.send()
-    }
+//    func updateTotalComplete() {
+//        objectWillChange.send()
+//    }
     @Published var habits: [Habit]
     
     var totalComplete: Int {

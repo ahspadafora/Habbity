@@ -20,7 +20,7 @@ class MonthMetaData {
     }
 }
 
-class Day: Hashable {
+class Day: Hashable, ObservableObject {
     static func == (lhs: Day, rhs: Day) -> Bool {
         return lhs.date == rhs.date
     }
@@ -35,14 +35,25 @@ class Day: Hashable {
     // to-do: replace with image
     let number: String
     
-    var isSelected: Bool
-    let isWithinDisplayedMonth: Bool
     
-    init(date: Date, number: String, isSelected: Bool, isWithinDisplayedMonth: Bool) {
+    let isWithinDisplayedMonth: Bool
+    var habits: Habits {
+        didSet {
+            objectWillChange.send()
+        }
+    }
+    
+    func updateTotalCompletedHabits() {
+        objectWillChange.send()
+    }
+    
+    init(date: Date, number: String, isWithinDisplayedMonth: Bool, habits: Habits) {
         self.date = date
         self.number = number
-        self.isSelected = isSelected
         self.isWithinDisplayedMonth = isWithinDisplayedMonth
+        self.habits = habits
     }
     
 }
+
+

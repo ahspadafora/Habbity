@@ -14,6 +14,7 @@
 		BA9713F025592AC300F90A98 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713EF25592AC300F90A98 /* Habit.swift */; };
 		BA9713F2255936CB00F90A98 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713F1255936CB00F90A98 /* AddView.swift */; };
 		BA9713F4255A5A5D00F90A98 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713F3255A5A5D00F90A98 /* DateFormatter.swift */; };
+		BA9713F6255B8FBC00F90A98 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713F5255B8FBC00F90A98 /* WeekView.swift */; };
 		BAD51EB62557EF3D003C134B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51EB52557EF3D003C134B /* AppDelegate.swift */; };
 		BAD51EB82557EF3D003C134B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51EB72557EF3D003C134B /* SceneDelegate.swift */; };
 		BAD51EBA2557EF3D003C134B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51EB92557EF3D003C134B /* ContentView.swift */; };
@@ -32,6 +33,7 @@
 		BA9713EF25592AC300F90A98 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		BA9713F1255936CB00F90A98 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		BA9713F3255A5A5D00F90A98 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		BA9713F5255B8FBC00F90A98 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		BAD51EB22557EF3D003C134B /* Habitty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD51EB52557EF3D003C134B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD51EB72557EF3D003C134B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				BAD51EB52557EF3D003C134B /* AppDelegate.swift */,
 				BAD51EB72557EF3D003C134B /* SceneDelegate.swift */,
 				BAD51EB92557EF3D003C134B /* ContentView.swift */,
+				BA9713F5255B8FBC00F90A98 /* WeekView.swift */,
 				BA9713F1255936CB00F90A98 /* AddView.swift */,
 				BA9713EF25592AC300F90A98 /* Habit.swift */,
 				BA9713ED25591DF600F90A98 /* delete.swift */,
@@ -184,6 +187,7 @@
 				BA9713F4255A5A5D00F90A98 /* DateFormatter.swift in Sources */,
 				BAD51EB62557EF3D003C134B /* AppDelegate.swift in Sources */,
 				BAD51EB82557EF3D003C134B /* SceneDelegate.swift in Sources */,
+				BA9713F6255B8FBC00F90A98 /* WeekView.swift in Sources */,
 				BA9713E72559112C00F90A98 /* CalendarView.swift in Sources */,
 				BAD51EBA2557EF3D003C134B /* ContentView.swift in Sources */,
 				BAD51EF02558B35A003C134B /* Day.swift in Sources */,

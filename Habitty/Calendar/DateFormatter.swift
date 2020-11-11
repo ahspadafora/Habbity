@@ -10,12 +10,10 @@ import Foundation
 
 extension DateFormatter {
     
-    
-    
     static func getFormattedString(from date: Date) -> String {
         var dateFormatter: DateFormatter {
             let df = DateFormatter()
-            df.dateFormat = "MMMM YYYY"
+            df.dateFormat = "MMMM dd YYYY"
             return df
         }
         return dateFormatter.string(from: date)

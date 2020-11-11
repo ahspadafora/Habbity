@@ -6,14 +6,21 @@
 //  Copyright © 2020 Amber Spadafora. All rights reserved.
 //
 
+
+/*
+ TO DO: Handle the case of when it becomes a new day
+ */
+
 import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var habits: Habits = Habits(habits: [])
+    //@ObservedObject var habits: Habits = Habits(habits: [])
+    @ObservedObject var day: Day = Day(date: Date(), number: "", isWithinDisplayedMonth: true, habits: Habits(habits: []))
     
     var habitsCount: Int {
-        return self.habits.habits.count
+        return self.day.habits.habits.count
+        //return self.habits.habits.count
     }
     @State private var isShowingAddView = false
     
@@ -36,16 +43,18 @@ struct ContentView: View {
                     
                     VStack {
                         if self.habitsCount != 0 {
-                            List(self.habits.habits) { habit in
+                            List(self.day.habits.habits) { habit in
                                 HStack {
                                     Text(habit.description)
                                     Spacer()
                                     CheckboxView(wasTapped: {
-                                        self.habits.updateTotalComplete()
+                                        self.day.updateTotalCompletedHabits()
                                         habit.isCompleted.toggle()
                                     }).frame(height: 35).padding()
                                 }.frame(height: 40)
                             }.environment(\.defaultMinListRowHeight, 45)
+                            ProgressView(day: self.day)
+                            .frame(width: 250)
                         } else {
                             Spacer()
                             Text("Click the + button to create your first habit").font(.title).padding()
@@ -54,9 +63,6 @@ struct ContentView: View {
                         
                     }
                     
-                    ProgressView(numberOfTotalHabits: self.habitsCount, numberOfCompletedHabits: self.habits.totalComplete)
-                        .frame(width: 250)
-                    Spacer()
                 }
                     
                 .navigationBarTitle("Daily Habits")
@@ -65,9 +71,9 @@ struct ContentView: View {
                 }, label: {
                     Image("add").renderingMode(.original)
                 }))
-                    .sheet(isPresented: self.$isShowingAddView) {
-                        AddView(habits: self.habits)
-                }
+                .sheet(isPresented: self.$isShowingAddView) {
+                    AddView(habits: self.day.habits)
+            }
             }
         }
     }

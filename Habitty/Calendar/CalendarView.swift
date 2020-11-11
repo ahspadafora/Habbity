@@ -51,8 +51,8 @@ struct CalendarView: View {
             ForEach(self.monthFormatter.displayMonth, id: \.self) { week in
                 HStack {
                     // columns
-                    ForEach(0..<7) { day in
-                        Text("\(week[day].number)").frame(width: 50, height: 50)
+                    ForEach(0..<7) { dayIndex in
+                        Text("\(week[dayIndex].number)").frame(width: 50, height: 50)
                     }
                 }
             }

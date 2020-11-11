@@ -11,7 +11,7 @@ import Foundation
 class MonthFormatter: ObservableObject {
     
     static let calendar = Calendar(identifier: .gregorian)
-    
+    // displayMonth is an array of weeks that make the current month (including days from the prev. and next month to fill keep the calendar grid rectangle
     @Published var displayMonth: [[Day]]
     
     var baseDate: Date = Date() {
@@ -25,6 +25,7 @@ class MonthFormatter: ObservableObject {
         self.displayMonth = MonthFormatter.generateDisplayMonth(for: baseDate)
     }
     
+    // TO-DO: Add an argument for habits 
     static func generateDisplayMonth(for date: Date) -> [[Day]] {
         let month = MonthFormatter.generateDaysInMonth(for: date)
         
@@ -72,14 +73,13 @@ class MonthFormatter: ObservableObject {
         return days
     }
     
-    
-    
     static func generateDay(offsetBy dayOffset: Int, for baseDate: Date, isWithinDisplayedMonth: Bool) -> Day {
         let date = calendar.date(byAdding: .day, value: dayOffset, to: baseDate) ?? baseDate
         let dateFormatter = DateFormatter()
         //dateFormatter.dateStyle = .short
         dateFormatter.dateFormat = "d"
-        return Day(date: date, number: dateFormatter.string(from: date), isSelected: calendar.isDateInToday(date), isWithinDisplayedMonth: isWithinDisplayedMonth)
+        //TO-DO: Inject habits from somewhere
+        return Day(date: date, number: dateFormatter.string(from: date), isWithinDisplayedMonth: isWithinDisplayedMonth, habits: Habits(habits: []))
     }
     
     static func generateStartOfNextMonth(using firstDayOfDisplayedMonth: Date) -> [Day] {

@@ -10,11 +10,17 @@ import SwiftUI
 
 struct ProgressView: View {
     
-    var numberOfTotalHabits = 5
-    var numberOfCompletedHabits = 5
+    @ObservedObject var day: Day
+    
+    var numberOfTotalHabits: Int {
+        return day.habits.habits.count
+    }
+    var numberOfCompletedHabits: Int {
+        return day.habits.habits.filter{$0.isCompleted}.count
+    }
     
     var percentageOfHabitsComplete: CGFloat {
-        return CGFloat(numberOfCompletedHabits) / CGFloat(numberOfTotalHabits)
+        return CGFloat(day.habits.totalComplete) / CGFloat(day.habits.habits.count)
     }
     
     var body: some View {
@@ -29,6 +35,7 @@ struct ProgressView: View {
 
 struct ProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressView()
+        let day = Day(date: Date(), number: "1", isWithinDisplayedMonth: true, habits: Habits(habits: [Habit(description: "read for 10 mins"), Habit(description: "practice coding")]))
+        return ProgressView(day: day)
     }
 }
