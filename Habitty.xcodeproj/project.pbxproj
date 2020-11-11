@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA9713E72559112C00F90A98 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713E62559112C00F90A98 /* CalendarView.swift */; };
+		BA9713E92559114400F90A98 /* MonthFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713E82559114400F90A98 /* MonthFormatter.swift */; };
+		BA9713EC255911AA00F90A98 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713EB255911AA00F90A98 /* ProgressView.swift */; };
+		BA9713EE25591DF600F90A98 /* delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713ED25591DF600F90A98 /* delete.swift */; };
+		BA9713F025592AC300F90A98 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713EF25592AC300F90A98 /* Habit.swift */; };
+		BA9713F2255936CB00F90A98 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713F1255936CB00F90A98 /* AddView.swift */; };
+		BA9713F4255A5A5D00F90A98 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9713F3255A5A5D00F90A98 /* DateFormatter.swift */; };
 		BAD51EB62557EF3D003C134B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51EB52557EF3D003C134B /* AppDelegate.swift */; };
 		BAD51EB82557EF3D003C134B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51EB72557EF3D003C134B /* SceneDelegate.swift */; };
 		BAD51EBA2557EF3D003C134B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51EB92557EF3D003C134B /* ContentView.swift */; };
@@ -14,9 +21,17 @@
 		BAD51EBF2557EF3F003C134B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD51EBE2557EF3F003C134B /* Preview Assets.xcassets */; };
 		BAD51EC22557EF3F003C134B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD51EC02557EF3F003C134B /* LaunchScreen.storyboard */; };
 		BAD51ECA2557FB59003C134B /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51EC92557FB59003C134B /* CheckboxView.swift */; };
+		BAD51EF02558B35A003C134B /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD51EEF2558B35A003C134B /* Day.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA9713E62559112C00F90A98 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		BA9713E82559114400F90A98 /* MonthFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthFormatter.swift; sourceTree = "<group>"; };
+		BA9713EB255911AA00F90A98 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		BA9713ED25591DF600F90A98 /* delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = delete.swift; sourceTree = "<group>"; };
+		BA9713EF25592AC300F90A98 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		BA9713F1255936CB00F90A98 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		BA9713F3255A5A5D00F90A98 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		BAD51EB22557EF3D003C134B /* Habitty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD51EB52557EF3D003C134B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD51EB72557EF3D003C134B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +41,7 @@
 		BAD51EC12557EF3F003C134B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAD51EC32557EF3F003C134B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAD51EC92557FB59003C134B /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
+		BAD51EEF2558B35A003C134B /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +55,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA9713EA2559115600F90A98 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				BAD51EEF2558B35A003C134B /* Day.swift */,
+				BA9713E82559114400F90A98 /* MonthFormatter.swift */,
+				BA9713F3255A5A5D00F90A98 /* DateFormatter.swift */,
+				BA9713E62559112C00F90A98 /* CalendarView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		BAD51EA92557EF3D003C134B = {
 			isa = PBXGroup;
 			children = (
@@ -61,7 +88,12 @@
 				BAD51EB52557EF3D003C134B /* AppDelegate.swift */,
 				BAD51EB72557EF3D003C134B /* SceneDelegate.swift */,
 				BAD51EB92557EF3D003C134B /* ContentView.swift */,
+				BA9713F1255936CB00F90A98 /* AddView.swift */,
+				BA9713EF25592AC300F90A98 /* Habit.swift */,
+				BA9713ED25591DF600F90A98 /* delete.swift */,
+				BA9713EB255911AA00F90A98 /* ProgressView.swift */,
 				BAD51EC92557FB59003C134B /* CheckboxView.swift */,
+				BA9713EA2559115600F90A98 /* Calendar */,
 				BAD51EBB2557EF3F003C134B /* Assets.xcassets */,
 				BAD51EC02557EF3F003C134B /* LaunchScreen.storyboard */,
 				BAD51EC32557EF3F003C134B /* Info.plist */,
@@ -149,9 +181,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9713F4255A5A5D00F90A98 /* DateFormatter.swift in Sources */,
 				BAD51EB62557EF3D003C134B /* AppDelegate.swift in Sources */,
 				BAD51EB82557EF3D003C134B /* SceneDelegate.swift in Sources */,
+				BA9713E72559112C00F90A98 /* CalendarView.swift in Sources */,
 				BAD51EBA2557EF3D003C134B /* ContentView.swift in Sources */,
+				BAD51EF02558B35A003C134B /* Day.swift in Sources */,
+				BA9713EC255911AA00F90A98 /* ProgressView.swift in Sources */,
+				BA9713F2255936CB00F90A98 /* AddView.swift in Sources */,
+				BA9713F025592AC300F90A98 /* Habit.swift in Sources */,
+				BA9713E92559114400F90A98 /* MonthFormatter.swift in Sources */,
+				BA9713EE25591DF600F90A98 /* delete.swift in Sources */,
 				BAD51ECA2557FB59003C134B /* CheckboxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

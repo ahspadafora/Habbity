@@ -10,19 +10,64 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @ObservedObject var habits: Habits = Habits(habits: [])
+    
+    var habitsCount: Int {
+        return self.habits.habits.count
+    }
+    @State private var isShowingAddView = false
+    
     var body: some View {
-        VStack {
-            HStack {
-                Text("Read 15 minutes")
-                CheckboxView().frame(width: 45)
-            }
-            HStack {
-                Text("Read 15 minutes")
-                CheckboxView().frame(width: 45)
-            }
-            HStack {
-                Text("Read 15 minutes")
-                CheckboxView().frame(width: 45)
+        GeometryReader { geo in
+            
+            NavigationView {
+                VStack {
+                    HStack() {
+                        Text(DateFormatter.getFormattedString(from: Date()))
+                            .font(.largeTitle).offset(x: 18)
+                        Spacer()
+                    }
+                    
+                    HStack() {
+                        Text("Today did you...")
+                            .font(.title).offset(x: 18)
+                        Spacer()
+                    }
+                    
+                    VStack {
+                        if self.habitsCount != 0 {
+                            List(self.habits.habits) { habit in
+                                HStack {
+                                    Text(habit.description)
+                                    Spacer()
+                                    CheckboxView(wasTapped: {
+                                        self.habits.updateTotalComplete()
+                                        habit.isCompleted.toggle()
+                                    }).frame(height: 35).padding()
+                                }.frame(height: 40)
+                            }.environment(\.defaultMinListRowHeight, 45)
+                        } else {
+                            Spacer()
+                            Text("Click the + button to create your first habit").font(.title).padding()
+                            Spacer()
+                        }
+                        
+                    }
+                    
+                    ProgressView(numberOfTotalHabits: self.habitsCount, numberOfCompletedHabits: self.habits.totalComplete)
+                        .frame(width: 250)
+                    Spacer()
+                }
+                    
+                .navigationBarTitle("Daily Habits")
+                .navigationBarItems(trailing: Button(action: {
+                    self.isShowingAddView = true
+                }, label: {
+                    Image("add").renderingMode(.original)
+                }))
+                    .sheet(isPresented: self.$isShowingAddView) {
+                        AddView(habits: self.habits)
+                }
             }
         }
     }
